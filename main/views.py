@@ -287,6 +287,7 @@ def pay(request):
         last_name = request.POST['last_name'] #collect from the template incase there is change
         phone = request.POST['phone'] #collect from the template incase there is change
         add_info = request.POST['add_info'] #collect from the template incase there is change
+        address = request.POST['address'] #collect from the template incase there is change
 
         #collect data to send to paystack via call
         headers = {'Authorization': f'Bearer {api_key}'}
@@ -305,10 +306,10 @@ def pay(request):
             account.user = user
             account.first_name = user.first_name
             account.last_name = user.last_name
-            # account.address = address
             account.amount = total/100
             account.paid = True
             account.phone = phone 
+            account.address = address
             account.additional_info = add_info
             account.pay_code = ref
             account.save()
