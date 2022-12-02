@@ -252,24 +252,6 @@ body{
 .reg a{
     color: #cd0b0b;
 }
-.pass{
-    position: relative;
-}
-.show{
-    position: absolute;
-    top: 55%;
-    right: 20px;
-    cursor: pointer;
-}
-.show .bi-eye-fill{
-    display: none;
-}
-.show.hide .bi-eye-fill{
-    display: block;
-}
-.show.hide .bi-eye-slash-fill{
-    display: none;
-}
 
 /* styling login done  */
 /* styling cart  */
